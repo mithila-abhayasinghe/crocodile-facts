@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crocodile Facts</title>
+  <style>
+    /* style.css */
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f8f8f8; 
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333; 
+      margin-bottom: 30px;
+    }
+
+    #factButton {
+      background-color: #007bff; 
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+    }
+
+    #factButton:hover {
+      background-color: #0056b3; 
+    }
+
+    #factDisplay {
+      margin-top: 40px;
+      font-size: 1.3em;
+      color: #444;
+      text-align: center;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Amazing Crocodile Facts</h1>
+  <button id="factButton">Show Me a Fact</button>
+  <div id="factDisplay"></div>
+
+  <script>
+    const facts = [
+      "Crocodiles are reptiles that are found in tropical regions around the world.",
+      "They are well-known for their powerful jaws, sharp teeth, and scaly skin.",
+      "Crocodiles are opportunistic predators and will eat a variety of animals, including fish, birds, and mammals.",
+      "They are excellent swimmers and can hold their breath underwater for up to an hour.",
+      "Crocodiles are cold-blooded animals, meaning they rely on external sources of heat to regulate their body temperature.",
+      "Female crocodiles lay eggs, and they are known to be protective mothers.",
+      "The saltwater crocodile is the largest living reptile, reaching lengths of over 20 feet.",
+      "Crocodiles have a special valve in their throat that prevents water from entering their lungs while they are eating underwater.",
+      "Crocodiles have a lifespan of up to 70 years or more in the wild.",
+      "They are considered to be one of the oldest living creatures on Earth, with their ancestors dating back to the dinosaur era."
+    ];
+
+    const factButton = document.getElementById('factButton');
+    const factDisplay = document.getElementById('factDisplay');
+
+    factButton.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      factDisplay.textContent = facts[randomIndex];
+    });
+  </script>
+</body>
+</html>
